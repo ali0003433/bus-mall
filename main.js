@@ -19,16 +19,18 @@ let FontImage = function(name, style, filePath, id) {
     this.id = id;
     this.shown = 0;
     this.clicked = 0;
+    this.addClicks = 0;
 };
 
 //check if localStorage has any values
+console.log(localStorage)
+console.log(localStorage.length)
+console.log(imageArray)
 if(localStorage.length > 0) {
     //retrieve stored imageArray from local storage because it has previous clicks and shown
     let getData = localStorage.getItem('storageImageArray')
     //reassign value of imageArray to the parsed version of localStorage imageArray
     imageArray = JSON.parse(getData);
-    let getClicks = localStorage.getItem('storageTotalclicks')
-    totalClicks = JSON.parse(getClicks)
 } else {
     //if no localStorage values, instantiate constructor to create multiple instances of font images
     let Garamond = new FontImage('Garamond','serif','img/garamond.jpg', 'garamond')
@@ -38,7 +40,8 @@ if(localStorage.length > 0) {
     let Monaco = new FontImage('Monaco', 'monospaced', 'img/monaco.jpg', 'monaco')
     let Celtic = new FontImage('Celtic', 'gaelic', 'img/celtic.jpg', 'celtic')
     //push new instances of FontImage to imageArray 
-    imageArray.push(Garamond, Helvetica, Old_English, Courier, Monaco, Celtic)
+    imageArray.push([Garamond, Helvetica, Old_English, Courier, Monaco, Celtic])
+    console.log(imageArray)
 }
 
 //define a function that will select a random image from imageArray. We will later display these images
@@ -54,23 +57,20 @@ function randomImage() {
 
 //define event handler function that will increment the property clicked if html img id is equal to the image object id
 function imageClicked(event) {
-    //assign clicks to correct image
-    if (event.target.id === firstImage.id) {
-        firstImage.clicked += 1;
-        } else if (event.target.id === secondImage.id) {
-        secondImage.clicked += 1;
-        } else if (event.target.id === thirdImage.id) {
-        thirdImage.clicked += 1; 
+   if (event.target.id === firstImage.id) {
+                firstImage.clicked += 1;
+    } else if (event.target.id === secondImage.id) {
+                secondImage.clicked += 1;
+    } else if (event.target.id === thirdImage.id) {
+                thirdImage.clicked += 1; 
     }
     totalClicks += 1;
     localStorage.setItem('storageImageArray', JSON.stringify(imageArray))
-    localStorage.setItem('storageTotalClicks', JSON.stringify(totalClicks))
-    if (totalClicks === 3) {
+    if (totalClicks === 3){
         displayChart()
         localStorage.clear('storageImageArray')
-        } else {
-    //every time an event is clicked, save imageArray to localStorage
-        displayImages();
+    } else {
+        displayImages()
         }
 }
 //define a function that will loop three times. Assign the return value of randomImage to var imageObject. In each loop, assign imageObject a new randomIamge. (1) During first loop, assign the random image to global var firstImage. Create a new img element in html. append it to the div. Set the html attribute id to the id of the randomly chosen image. Set the source of the img element to the randomly chosen image's filePath property. Add an event listener to that img element so that it runs the function imageClicked each time an event occurs. (2) During second loop, assign the random image the global var secondImage. (3) During third loop, assign the random image the global var thirdImage. 

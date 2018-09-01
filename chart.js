@@ -6,14 +6,14 @@ function populateChart(prop) {
     //declare var and assign empty array to store property values
     let propArray = [];
     //loop through the imageArray 
-    for (let i =0; i < imageArray.length; i++) {
+    for (let i = 0; i < imageArray.length; i++) {
     propArray.push(imageArray[i][prop])
     }
     return propArray;
 }
 
 //declare a new var and assign it the value of a new instance of chart object (using chartjs CDN)
-function() {
+function displayChart() {
     elImageContainer.innerHTML = '';
     elChart.innerHTML = '';
     let myChart = new Chart (elChart, {
