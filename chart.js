@@ -13,7 +13,7 @@ function populateChart(prop) {
 }
 
 //declare a new var and assign it the value of a new instance of chart object (using chartjs CDN)
-function displayChart() {
+function() {
     elImageContainer.innerHTML = '';
     elChart.innerHTML = '';
     let myChart = new Chart (elChart, {
