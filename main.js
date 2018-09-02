@@ -29,6 +29,7 @@ if(localStorage.length > 0) {
     imageArray = JSON.parse(getData);
     let getClicks = localStorage.getItem('storageTotalclicks')
     totalClicks = JSON.parse(getClicks)
+    console.log(totalClicks)
 } else {
     //if no localStorage values, instantiate constructor to create multiple instances of font images
     let Garamond = new FontImage('Garamond','serif','img/garamond.jpg', 'garamond')
@@ -39,6 +40,7 @@ if(localStorage.length > 0) {
     let Celtic = new FontImage('Celtic', 'gaelic', 'img/celtic.jpg', 'celtic')
     //push new instances of FontImage to imageArray 
     imageArray.push(Garamond, Helvetica, Old_English, Courier, Monaco, Celtic)
+    console.log(imageArray)
 }
 
 //define a function that will select a random image from imageArray. We will later display these images
@@ -64,7 +66,7 @@ function imageClicked(event) {
     }
     totalClicks += 1;
     localStorage.setItem('storageImageArray', JSON.stringify(imageArray))
-    localStorage.setItem('storageTotalClicks', JSON.stringify(totalClicks))
+    localStorage.setItem('storageTotalClicks', totalClicks)
     if (totalClicks === 3) {
         displayChart()
         localStorage.clear('storageImageArray')
