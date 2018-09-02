@@ -5,7 +5,7 @@ let fontArray = [];
 let elImageContainer = document.getElementById('image-container')
 
 //create an object constructor that takes in parameters and store properties of an img
-let FontImage = function (name, style, mainColor, filePath, id) {
+let FontImage = function (name, style, filePath, mainColor, id) {
     this.name = name;
     this.style = style;
     this.filePath = filePath;
@@ -17,15 +17,24 @@ let FontImage = function (name, style, mainColor, filePath, id) {
 };
 
 //instantiate object constructor 
-let Garamond = new FontImage('Garamond', 'serif','yellow', 'img/garamond.jpg', 'garamond')
-let Helvetica = new FontImage('Helvetica', 'sans-serif','white', 'img/helvetica.jpg','helvetica')
-let Old_English = new FontImage('Old English', 'blackletter', 'blue','img/old_english.jpg', 'oldEnglish')
-let Courier = new FontImage('Courier', 'monospaced','yellow', 'img/courier.jpg', 'courier')
-let Monaco = new FontImage('Monaco', 'monospaced', 'white','img/monaco.jpg', 'monaco')
-let Celtic = new FontImage('Celtic', 'gaelic', 'yellow','img/celtic.jpg', 'celtic')
-
+let Garamond = new FontImage('Garamond', 'serif', 'img/garamond.jpg', 'yellow','garamond')
+let Helvetica = new FontImage('Helvetica', 'sans-serif', 'img/helvetica.jpg','white','helvetica')
+let Old_English = new FontImage('Old English', 'script','img/old_english.jpg','blue', 'oldEnglish')
+let Courier = new FontImage('Courier', 'monospaced','img/courier.jpg','yellow', 'courier')
+let Monaco = new FontImage('Monaco', 'monospaced', 'img/monaco.jpg','white', 'monaco')
+let Celtic = new FontImage('Celtic', 'script','img/celtic.jpg','yellow', 'celtic')
+let Waltograph = new FontImage('Waltograph', 'script', 'img/waltograph.jpg','purple','waltograph')
+let Comic_Sans = new FontImage('Comic Sans','sans-serif', 'img/comic_sans.jpg', 'yellow','comicSans')
+let Times_New_Roman = new FontImage('Times New Roman','serif','img/times_new_roman.jpg','white', 'timesNewRoman')
+let Arial_Rounded = new FontImage('Arial Rounded', 'sans-serif', 'img/arial_rounded.jpg', 'brown', 'arialRounded')
+let Kinescope = new FontImage ('Kinescope', 'script', 'img/kinescope.jpg', 'grey', 'kinescope')
+let Bodoni = new FontImage('Bodoni', 'serif', 'img/bodoni.jpg','white','bodoni')
+let Clarendon = new FontImage('Clarendon', 'serif', 'img/clarendon.jpg', 'blue', 'clarendon')
+let Doku = new FontImage('Doku','monospaced', 'img/doku.jpg', 'black', 'doku')
+let Anonymous = new FontImage('Anonymous','monospaced', 'img/anonymous.jpg', 'white', 'anonymous')
 //push new objects to array
-fontArray.push(Garamond, Helvetica, Old_English, Courier, Monaco, Celtic)
+fontArray.push(Garamond, Helvetica, Old_English, Courier, Monaco, Celtic, Waltograph, Comic_Sans, Times_New_Roman, Arial_Rounded, Kinescope, Bodoni, Clarendon, Doku, Anonymous)
+
 console.log(fontArray);
 //define function to return random font object
 function randomFont(){
