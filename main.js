@@ -32,8 +32,19 @@ let Bodoni = new FontImage('Bodoni', 'serif', 'img/bodoni.jpg','white','bodoni')
 let Clarendon = new FontImage('Clarendon', 'serif', 'img/clarendon.jpg', 'blue', 'clarendon')
 let Doku = new FontImage('Doku','monospaced', 'img/doku.jpg', 'black', 'doku')
 let Anonymous = new FontImage('Anonymous','monospaced', 'img/anonymous.jpg', 'white', 'anonymous')
+let Cooper_Black = new FontImage('Cooper Black', 'serif', 'img/cooper_black.jpg', 'blue', 'cooperBlack')
+let Windsor = new FontImage('Windsor', 'serif', 'img/windsor.jpg', 'white', 'windsor')
+let Balloon = new FontImage('Balloon', 'script', 'img/balloon.jpg', 'red', 'balloon')
+let Phenix_American = new FontImage('Phenix American', 'monospaced', 'img/phenix_american.jpg', 'white', 'phenixAmerican')
+let Din = new FontImage('DIN', 'sans-serif', 'img/din.jpg', 'white', 'din')
+let Gotham_Bold = new FontImage('Gotham Bold', 'sans-serif', 'img/gotham_bold.jpg', 'blue', 'gothamBold')
+let Gill_Sans = new FontImage('Gill Sans', 'sans-serif', 'img/gill_sans.jpg', 'green', 'gillSans')
+let Optima_Demi_Bold = new FontImage('Optima Demi Bold','sans-serif', 'img/optima_demi_bold.jpg','red','optimaDemiBold' )
+let Eurostile_Bold = new FontImage('Eurostile Bold', 'sans-serif', 'img/eurostile_bold.jpg', 'red', 'eurostileBold')
+let Kaufmann = new FontImage('Kaufmann', 'script', 'img/kaufmann.jpg', 'blue', 'kaufmann')
+let Ocr_B = new FontImage('OCR B', 'monospaced','img/ocr_b.jpg', 'white', 'ocrB')
 //push new objects to array
-fontArray.push(Garamond, Helvetica, Old_English, Courier, Monaco, Celtic, Waltograph, Comic_Sans, Times_New_Roman, Arial_Rounded, Kinescope, Bodoni, Clarendon, Doku, Anonymous)
+fontArray.push(Garamond, Helvetica, Old_English, Courier, Monaco, Celtic, Waltograph, Comic_Sans, Times_New_Roman, Arial_Rounded, Kinescope, Bodoni, Clarendon, Doku, Anonymous, Cooper_Black, Windsor, Balloon, Phenix_American, Din, Gotham_Bold, Gill_Sans, Optima_Demi_Bold, Eurostile_Bold, Kaufmann, Ocr_B)
 
 console.log(fontArray);
 //define function to return random font object
