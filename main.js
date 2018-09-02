@@ -5,10 +5,11 @@ let fontArray = [];
 let elImageContainer = document.getElementById('image-container')
 
 //create an object constructor that takes in parameters and store properties of an img
-let FontImage = function (name, style, filePath, id) {
+let FontImage = function (name, style, mainColor, filePath, id) {
     this.name = name;
     this.style = style;
     this.filePath = filePath;
+    this.mainColor = mainColor;
     this.id = id;
     this.shown = 0;
     this.clicked = 0;
@@ -16,12 +17,12 @@ let FontImage = function (name, style, filePath, id) {
 };
 
 //instantiate object constructor 
-let Garamond = new FontImage('Garamond', 'serif', 'img/garamond.jpg', 'garamond')
-let Helvetica = new FontImage('Helvetica', 'sans-serif', 'img/helvetica.jpg','helvetica')
-let Old_English = new FontImage('Old English', 'blackletter', 'img/old_english.jpg', 'oldEnglish')
-let Courier = new FontImage('Courier', 'monospaced', 'img/courier.jpg', 'courier')
-let Monaco = new FontImage('Monaco', 'monospaced', 'img/monaco.jpg', 'monaco')
-let Celtic = new FontImage('Celtic', 'gaelic', 'img/celtic.jpg', 'celtic')
+let Garamond = new FontImage('Garamond', 'serif','yellow', 'img/garamond.jpg', 'garamond')
+let Helvetica = new FontImage('Helvetica', 'sans-serif','white', 'img/helvetica.jpg','helvetica')
+let Old_English = new FontImage('Old English', 'blackletter', 'blue','img/old_english.jpg', 'oldEnglish')
+let Courier = new FontImage('Courier', 'monospaced','yellow', 'img/courier.jpg', 'courier')
+let Monaco = new FontImage('Monaco', 'monospaced', 'white','img/monaco.jpg', 'monaco')
+let Celtic = new FontImage('Celtic', 'gaelic', 'yellow','img/celtic.jpg', 'celtic')
 
 //push new objects to array
 fontArray.push(Garamond, Helvetica, Old_English, Courier, Monaco, Celtic)
