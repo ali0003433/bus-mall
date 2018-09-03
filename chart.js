@@ -22,7 +22,7 @@ function displayBarChart() {
                 {
                     label: 'Times clicked',
                     data: populateBarChart('clicked'),
-                    backgroundColor: 'lightgreen'
+                    backgroundColor: 'purple'
                 }, 
                 {
                     label: 'Times shown',

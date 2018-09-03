@@ -43,6 +43,7 @@ let Optima_Demi_Bold = new FontImage('Optima Demi Bold','sans-serif', 'img/optim
 let Eurostile_Bold = new FontImage('Eurostile Bold', 'sans-serif', 'img/eurostile_bold.jpg', 'red', 'eurostileBold')
 let Kaufmann = new FontImage('Kaufmann', 'script', 'img/kaufmann.jpg', 'blue', 'kaufmann')
 let Ocr_B = new FontImage('OCR B', 'monospaced','img/ocr_b.jpg', 'white', 'ocrB')
+
 //push new objects to array
 fontArray.push(Garamond, Helvetica, Old_English, Courier, Monaco, Celtic, Waltograph, Comic_Sans, Times_New_Roman, Arial_Rounded, Kinescope, Bodoni, Clarendon, Doku, Anonymous, Cooper_Black, Windsor, Balloon, Phenix_American, Din, Gotham_Bold, Gill_Sans, Optima_Demi_Bold, Eurostile_Bold, Kaufmann, Ocr_B)
 
@@ -101,7 +102,7 @@ function fontClicked(event) {
         fontArray[i].allClicks +=1
     }
     //check if number of clicks equals three then display chart
-    if (fontArray[0].allClicks === 3){
+    if (fontArray[0].allClicks ===8){
         displayBarChart()
     //else display three new random font images
     } else displayRandomFonts()
