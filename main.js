@@ -15,7 +15,6 @@ let FontImage = function (name, style, filePath, mainColor, id) {
     this.clicked = 0;
     this.allClicks = 0; 
 };
-
 //if there's been at least one click event, get fontArray from localstorage
 console.log(localStorage.length)
 if(localStorage.length < 1){
@@ -77,6 +76,7 @@ function displayRandomFonts(){
         } else if (i === 1){
             while (randomFontGenerated.id === randomFontDisplayedOne.id){
                 randomFontDisplayedTwo = randomFont()
+                console.log('fire while 1')
             }
             randomFontDisplayedTwo = randomFontGenerated
             randomFontDisplayedTwo.shown +=1
@@ -84,6 +84,7 @@ function displayRandomFonts(){
         } else {
             while (randomFontGenerated.id === randomFontDisplayedOne.id || randomFontGenerated.id === randomFontDisplayedTwo.id) {
                 randomFontGenerated = randomFont()
+                console.log('fire while 2')
             }
             randomFontDisplayedThree = randomFontGenerated
             randomFontDisplayedThree.shown +=1
