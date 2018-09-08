@@ -69,7 +69,7 @@ function displayRandomFonts(){
             randomFontDisplayedOne.shown +=1
         } else if (i === 1){
             while (randomFontGenerated.id === randomFontDisplayedOne.id){
-                randomFontDisplayed = randomFont()
+                randomFontDisplayedTwo = randomFont()
             }
             randomFontDisplayedTwo = randomFontGenerated
             randomFontDisplayedTwo.shown +=1
