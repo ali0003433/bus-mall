@@ -42,7 +42,7 @@ if(localStorage.length < 1){
     let Din = new FontImage('DIN', 'sans-serif', 'img/din.jpg', 'white', 'din')
     let Gotham = new FontImage('Gotham Bold', 'sans-serif', 'img/gotham_bold.jpg', 'blue', 'gothamBold')
     let Gill = new FontImage('Gill Sans', 'sans-serif', 'img/gill_sans.jpg', 'green', 'gillSans')
-    let Optima= new FontImage('Optima Demi Bold','sans-serif', 'img/optima_demi_bold.jpg','red','optimaDemiBold' )
+    let Optima = new FontImage('Optima Demi Bold','sans-serif', 'img/optima_demi_bold.jpg','red','optimaDemiBold' )
     let Eurostile = new FontImage('Eurostile Bold', 'sans-serif', 'img/eurostile_bold.jpg', 'red', 'eurostileBold')
     let Kaufmann = new FontImage('Kaufmann', 'script', 'img/kaufmann.jpg', 'blue', 'kaufmann')
     let Ocr = new FontImage('OCR B', 'monospaced','img/ocr_b.jpg', 'white', 'ocrB')
