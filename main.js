@@ -119,7 +119,7 @@ function fontClicked(event) {
         for (let x = 0; x < fontArray.length; x++){
             fontArray[x].shown = 0;
             fontArray[x].clicked = 0;
-            fontArray[x].allClicks = 0;
+            fontArray[x].allClicks = 0;      
         }
         console.log('set fontArray properties to zero')
         localStorage.clear();
