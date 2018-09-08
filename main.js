@@ -9,11 +9,11 @@ let FontImage = function (name, style, filePath, mainColor, id) {
     this.name = name;
     this.style = style;
     this.filePath = filePath;
-    this.mainColor = mainColor;
+    this.mainColor = mainColor; 
     this.id = id;
     this.shown = 0;
     this.clicked = 0;
-    this.allClicks = 0;
+    this.allClicks = 0; 
 };
 
 //if there's been at least one click event, get fontArray from localstorage
@@ -67,33 +67,35 @@ let randomFontDisplayedThree;
 
 //create a function to generate 3 random font objects, ensure they're not duplicates, and increment shown property
 function displayRandomFonts(){
-    elImageContainer.innerHTML = '';
+    elImageContainer.innerHTML ='';
     for(let i = 0; i < 3; i++) {
         let randomFontGenerated = randomFont()
         if (i === 0){
             randomFontDisplayedOne = randomFontGenerated
-            console.log(randomFontGenerated)
             randomFontDisplayedOne.shown +=1
-            console.log(randomFontDisplayedOne)
+            console.log('fire 0')
         } else if (i === 1){
             while (randomFontGenerated.id === randomFontDisplayedOne.id){
-                randomFontDisplayed = randomFont()
+                randomFontDisplayedTwo = randomFont()
             }
             randomFontDisplayedTwo = randomFontGenerated
             randomFontDisplayedTwo.shown +=1
-            console.log(randomFontDisplayedTwo)
+            console.log('fire 1')
         } else {
             while (randomFontGenerated.id === randomFontDisplayedOne.id || randomFontGenerated.id === randomFontDisplayedTwo.id) {
                 randomFontGenerated = randomFont()
             }
             randomFontDisplayedThree = randomFontGenerated
             randomFontDisplayedThree.shown +=1
+            console.log('fire 2')
         }
-        let elOne = document.createElement("img")
+        let elOne = document.createElement('img')
+        console.log('fire create img')
         elImageContainer.appendChild(elOne)
         elOne.setAttribute('id', randomFontGenerated.id)
         elOne.src = randomFontGenerated.filePath
         elOne.addEventListener('click', fontClicked)
+        console.log('allClicks', fontArray[1].allClicks) 
     }
 }
 
@@ -127,4 +129,5 @@ function fontClicked(event) {
         displayRandomFonts()
     }
 }
+console.log('displayRandomFonts fire')
 displayRandomFonts()
