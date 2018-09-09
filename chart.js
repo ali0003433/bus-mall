@@ -1,9 +1,9 @@
-let elChart = document.getElementById('bar-chart').getContext('2d');
+let elChart = document.getElementById('my-chart').getContext('2d');
 
 function populateBarChart(prop) {
     let propArray = [];
     for (let i =0; i < fontArray.length; i++) {
-    propArray.push(fontArray[i][prop])
+        propArray.push(fontArray[i][prop]);
     }
     return propArray;
 }
@@ -15,7 +15,7 @@ function displayBarChart() {
     let myChart = new Chart (elChart, {
         //assign property of type to be a bar chart
         type: 'bar',
-        //set up data property that contains the labels for data 
+        //set up data property that contains the labels for data
         data: {
             labels: populateBarChart('name'),
             datasets: [
@@ -23,7 +23,7 @@ function displayBarChart() {
                     label: 'Times clicked',
                     data: populateBarChart('clicked'),
                     backgroundColor: 'purple'
-                }, 
+                },
                 {
                     label: 'Times shown',
                     data: populateBarChart('shown'),
