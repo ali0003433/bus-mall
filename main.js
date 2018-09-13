@@ -3,6 +3,7 @@ let fontArray = [];
 
 //elImageContainer assigned div with id 'image-container'
 let elImageContainer = document.getElementById('image-container');
+let elButton = document.getElementById('button');
 
 //create an object constructor that takes in parameters and store properties of an img
 let FontImage = function (name, style, filePath, mainColor, id) {
@@ -51,6 +52,16 @@ if(localStorage.length < 1){
 } else {
     let getStorageFontArray = localStorage.getItem('storageFontArray');
     fontArray = JSON.parse(getStorageFontArray);
+}
+//clear localstorage if user clicks button
+elButton.addEventListener('click', gameOver);
+function gameOver() {
+    localStorage.clear();
+    for (let x = 0; x < fontArray.length; x++){
+        fontArray[x].shown = 0;
+        fontArray[x].clicked = 0;
+        fontArray[x].allClicks = 0;
+    }
 }
 
 //define function to return random font object

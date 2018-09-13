@@ -17,7 +17,7 @@ function displayBarChart() {
         type: 'bar',
         //set up data property that contains the labels for data
         data: {
-            labels: populateBarChart('name'),
+            labels: populateBarChart('name','filePath'),
             datasets: [
                 {
                     label: 'Times clicked',
