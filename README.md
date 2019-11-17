@@ -17,7 +17,7 @@ A quiz to find your favorite typeface with a graph of your results at the end, a
 1. Clone this repo (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
 
 2. JS files:<br>
-[main](https://github.com/ali0003433/fav-typeface-quiz-with-graph/blob/master/main.js)
+[main](https://github.com/ali0003433/fav-typeface-quiz-with-graph/blob/master/main.js) <br> 
 [chart](https://github.com/ali0003433/fav-typeface-quiz-with-graph/blob/master/chart.js)
 
 3. HTML files: <br>
@@ -26,6 +26,8 @@ A quiz to find your favorite typeface with a graph of your results at the end, a
 
 4. CSS files: <br>
 [main](https://github.com/ali0003433/fav-typeface-quiz-with-graph/blob/master/main.css) <br>
+
+5. [User stories] https://github.com/ali0003433/fav-typeface-quiz-with-graph/blob/master/user_stories.md
 
 
 ## Contact
