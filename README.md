@@ -27,7 +27,7 @@ A quiz to find your favorite typeface with a graph of your results at the end, a
 4. CSS files: <br>
 [main](https://github.com/ali0003433/fav-typeface-quiz-with-graph/blob/master/main.css) <br>
 
-5. [User stories] https://github.com/ali0003433/fav-typeface-quiz-with-graph/blob/master/user_stories.md
+5. [User stories](https://github.com/ali0003433/fav-typeface-quiz-with-graph/blob/master/user_stories.md)
 
 
 ## Contact
